@@ -14201,6 +14201,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\AddItemPartial.cshtml",
+      "TargetPath": "Views\\Todo\\AddItemPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

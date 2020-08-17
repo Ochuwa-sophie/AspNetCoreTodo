@@ -138,3 +138,4 @@ C:\Users\SObomighie\repos\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\
 C:\Users\SObomighie\repos\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\zh-CN\Humanizer.resources.dll
 C:\Users\SObomighie\repos\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\zh-Hans\Humanizer.resources.dll
 C:\Users\SObomighie\repos\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\zh-Hant\Humanizer.resources.dll
+C:\Users\SObomighie\repos\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\Razor\Views\Todo\AddItemPartial.cshtml.g.cs
