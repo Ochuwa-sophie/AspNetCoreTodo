@@ -3,5 +3,19 @@
 <form asp-action = "AddItem" method="POST">
     <label asp-for="Title"> Add a new item: </label>
     <input asp-for="Title">
+   
+   @* <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker"></div>
+   <label asp-for="DueAt"> Set the due date: </label>
+   <input asp-for="DueAt" placeholder="Select date" type="text" id="example" class="form-control"> 
+     <i class="fas fa-calendar input-prefix" tabindex=0></i>
+    </div> *@
+
+    
+    @* <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+  <input placeholder="Select date" type="text" id="example" class="form-control">
+  <label for="example">Try me...</label>
+  <i class="fas fa-calendar input-prefix" tabindex=0></i>
+</div> *@
+
     <button type="submit"> Add</button>
 </form>
