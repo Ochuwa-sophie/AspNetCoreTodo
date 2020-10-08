@@ -1,0 +1,19 @@
+ @model TodoItem
+
+<form asp-action = "SetDueDate" method="POST">
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker"></div>
+   <label asp-for="DueAt"> Set the due date: </label>
+   <input asp-for="DueAt" placeholder="Select date" type="text" id="example" class="form-control"> 
+     <i class="fas fa-calendar input-prefix" tabindex=0></i>
+    </div> 
+
+    <button type="submit"> Add</button>
+</form>
+
+
+    
+    @* <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+  <input placeholder="Select date" type="text" id="example" class="form-control">
+  <label for="example">Try me...</label>
+  <i class="fas fa-calendar input-prefix" tabindex=0></i>
+</div> *@

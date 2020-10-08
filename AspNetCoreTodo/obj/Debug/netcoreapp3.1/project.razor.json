@@ -14387,7 +14387,7 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 800
+    "CSharpLanguageVersion": 900
   },
   "RootNamespace": "AspNetCoreTodo",
   "Documents": [
@@ -14419,6 +14419,11 @@
     {
       "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\SetEndDatePartial.cshtml",
+      "TargetPath": "Views\\Todo\\SetEndDatePartial.cshtml",
       "FileKind": "mvc"
     },
     {

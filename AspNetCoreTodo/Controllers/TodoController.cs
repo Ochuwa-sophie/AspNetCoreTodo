@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using AspNetCoreTodo.Models;
 using AspNetCoreTodo.Services;
@@ -43,5 +44,39 @@ namespace AspNetCoreTodo.Controllers
             }
             return RedirectToAction("Index");
         }
-    }
+
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MarkDone(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var successful = await _todoItemService.MarkDoneAsync(id);
+            if (!successful)
+            {
+                return BadRequest("Could not mark item as done.");
+            }
+            return RedirectToAction("Index");
+        }
+
+
+        // [ValidateAntiForgeryToken]
+        // public async Task<IActionResult> SetDueDate(TodoItem newItem)
+        // {
+        //     if (!ModelState.IsValid)
+        //     {
+        //         return RedirectToAction("Index");
+            }
+
+            // var dateTime = await _todoItemService.SetDueDateAsync(newItem);
+            // if (dateTime)
+            // {
+            //     return BadRequest("Could not add item.");
+            // }
+            // return RedirectToAction("Index");
+           
+        // }}
+    
 }
