@@ -14442,8 +14442,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_AdminActionsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminActionsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\ManageUsers\\Index.cshtml",
+      "TargetPath": "Views\\ManageUsers\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

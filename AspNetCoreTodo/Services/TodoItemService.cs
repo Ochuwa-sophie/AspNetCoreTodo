@@ -52,5 +52,9 @@ namespace AspNetCoreTodo.Services
             return saveResult == 1;
         }
 
+        public Task<bool> AddItemAsync(TodoItem newItem, ApplicationUser user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
