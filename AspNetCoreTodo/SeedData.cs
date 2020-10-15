@@ -1,9 +1,8 @@
-using Microsoft.VisualBasic;
-using System.Reflection.Metadata;
 using System;
 using System.Threading.Tasks;
 using AspNetCoreTodo.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNetCoreTodo
@@ -11,8 +10,7 @@ namespace AspNetCoreTodo
     public static class SeedData
     {
         public static async Task InitializeAsync(
-            IServiceProvider services
-        )
+            IServiceProvider services)
         {
             var roleManager = services
             .GetRequiredService<RoleManager<IdentityRole>>();
