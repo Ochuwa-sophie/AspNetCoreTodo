@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+  "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14387,78 +14387,78 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 900
+    "CSharpLanguageVersion": 800
   },
   "RootNamespace": "AspNetCoreTodo",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_LoginPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\AddItemPartial.cshtml",
-      "TargetPath": "Views\\Todo\\AddItemPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\SetEndDatePartial.cshtml",
-      "TargetPath": "Views\\Todo\\SetEndDatePartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\Index.cshtml",
-      "TargetPath": "Views\\Todo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_AdminActionsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_AdminActionsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\ManageUsers\\Index.cshtml",
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\ManageUsers\\Index.cshtml",
       "TargetPath": "Views\\ManageUsers\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\Index.cshtml",
+      "TargetPath": "Views\\Todo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\SetEndDatePartial.cshtml",
+      "TargetPath": "Views\\Todo\\SetEndDatePartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_AdminActionsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminActionsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\AddItemPartial.cshtml",
+      "TargetPath": "Views\\Todo\\AddItemPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     }
   ],
