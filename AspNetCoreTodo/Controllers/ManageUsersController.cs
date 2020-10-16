@@ -18,21 +18,13 @@ namespace AspNetCoreTodo.Controllers
         {
             _userManager = userManager;
         }
+
         public async Task<IActionResult> Index()
         {
-            var admins = (
-                await roleManager.CreateAsync(
-new IdentityRole(Constants.AdministratorRole))
+            //you used roleManager it should be UserManger
 
-            //     await _userManager
-            // .GetUsersInRoleAsync("Administrator")
-            )
-            .ToArray();
-            
-
-            var everyone = await _userManager.Users
-                .ToArrayAsync();
-
+            var admins = (await _userManager.GetUsersInRoleAsync("Administrator")).ToArray();
+            var everyone = await _userManager.Users.ToArrayAsync();
             var model = new ManageUsersViewModel
             {
                 Administrators = admins,
@@ -40,6 +32,26 @@ new IdentityRole(Constants.AdministratorRole))
             };
 
             return View(model);
+
+            //            var admins = (
+            //                await   .CreateAsync(
+            //new IdentityRole(Constants.AdministratorRole))
+
+            //            //     await _userManager
+            //            // .GetUsersInRoleAsync("Administrator")
+            //            )
+            //            .ToArray();
+
+            //            var everyone = await _userManager.Users
+            //                .ToArrayAsync();
+
+            //            var model = new ManageUsersViewModel
+            //            {
+            //                Administrators = admins,
+            //                Everyone = everyone
+            //            };
+
+            //            return View(model);
         }
     }
 }
