@@ -1,28 +1,32 @@
 @using Microsoft.AspNetCore.Identity
 @using AspNetCoreTodo.Models
 
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
+@*// so there was an error here too ... you registred IdentityUser in startup But your using ApplicationUser.. shouldnt be.
+    @inject SignInManager<ApplicationUser> signInManager
+    @inject UserManager<ApplicationUser> userManager*@
+@inject SignInManager<IdentityUser> signInManager
+@inject UserManager<IdentityUser> userManager
+@*Here you spelt you uses "signInManager" instead of "SignInManager" notice the S s and samething for userManger notice the U u *@
+@if (signInManager.IsSignedIn(User))
+{
+    var currentUser = await userManager.GetUserAsync(User);
 
-    @if (signInManager.IsSignedIn(User))
+    var isAdmin = currentUser != null
+
+    && await userManager.IsInRoleAsync(
+        currentUser,
+        Constants.AdministratorRole
+    );
+
+    if (isAdmin)
     {
-        var currentUser = await UserManager.GetUserAsync(User);
-
-        var isAdmin = currentUser != null
-
-        && await userManager.IsInRoleAsync(
-            currentUser,
-            Constants.AdministratorRole
-        );
-
-        if (isAdmin)
-        {
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a asp-controller="ManageUsers"
-                    asp-action="Index">
-                    Manage Users</a>
-                </li>
-            </ul>
-        }
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a asp-controller="ManageUsers"
+                   asp-action="Index">
+                    Manage Users
+                </a>
+            </li>
+        </ul>
     }
+}

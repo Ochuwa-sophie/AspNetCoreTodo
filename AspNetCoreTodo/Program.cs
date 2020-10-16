@@ -14,10 +14,10 @@ namespace AspNetCoreTodo
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
-            InitializeDatabase(host);
-            host.Run();
-            // CreateHostBuilder(args).Build().Run();
+            //var host = BuildWebHost(args);
+            //InitializeDatabase(host);
+            //host.Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
         private static void InitializeDatabase(IWebHost host)
@@ -38,6 +38,7 @@ namespace AspNetCoreTodo
                 }
             }
         }
+
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
