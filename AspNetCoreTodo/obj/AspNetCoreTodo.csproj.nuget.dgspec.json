@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj": {}
+    "C:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj": {
+    "C:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+        "projectUniqueName": "C:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
         "projectName": "AspNetCoreTodo",
-        "projectPath": "C:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
-        "packagesPath": "C:\\Users\\JAY-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JAY-PC\\source\\repos\\asp\\AspNetCoreTodo\\AspNetCoreTodo\\obj\\",
+        "projectPath": "C:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+        "packagesPath": "C:\\Users\\SObomighie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SObomighie\\repos\\AspNetCoreTodo\\AspNetCoreTodo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\JAY-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\SObomighie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -86,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
