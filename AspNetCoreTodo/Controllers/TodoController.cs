@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreTodo.Services;
 using AspNetCoreTodo.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCoreTodo.Controllers
@@ -26,10 +27,12 @@ namespace AspNetCoreTodo.Controllers
        //using IActionResult because it gives me a wider scope of return types
        
        private readonly ITodoItemService _todoItemService; //reference to the interface
-       
-       public TodoController(ITodoItemService todoItemService) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
+       private readonly UserManager<ApplicationUser> _userManager; 
+
+       public TodoController(ITodoItemService todoItemService, UserManager<ApplicationUser> _userManager) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
        {
             _todoItemService = todoItemService;
+            _userManager = userManager;
        }
        //the above will help my controler work with the todoitemserviceinterface aka ITodoItemService
 
@@ -37,6 +40,9 @@ namespace AspNetCoreTodo.Controllers
         //because async
         
         {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null) return Challenge();
+            
             var items = await _todoItemService.GetIncompleteItemsAsync();
 //takes todo item from service and puts them in the view model then bind model to the view
 
