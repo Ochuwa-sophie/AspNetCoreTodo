@@ -1,4 +1,4 @@
-@model ManageUsersViewModel
+@* @model ManageUsersViewModel
 
 @{
     ViewData["Title"] = "Manage Users";
@@ -18,7 +18,7 @@
     @*//there was an error here too .. i comment am out ..*@
 
     @*@foreach (var item in Model.Administrators)*@
-    @foreach (var User in Model.Administrators)
+    @* @foreach (var User in Model.Administrators)
     {
         <tr>
             <td>@User.Id</td>
@@ -43,4 +43,4 @@
             <td>@user.Email</td>
         </tr>
     }
-</table>
+</table> *@ *@

@@ -25,31 +25,34 @@ namespace AspNetCoreTodo.Services
                 .ToArrayAsync();
         }
 
-        public async Task<bool> AddItemAsync(TodoItem newItem, ApplicationUser user)
-        {
-            newItem.Id = Guid.NewGuid();
-            newItem.IsDone = false;
-            newItem.DueAt = DateTimeOffset.Now.AddDays(3);
-            newItem.UserId = user.Id;
+        // public async Task<bool> AddItemAsync(TodoItem newItem, ApplicationUser user
+        //  )
+        // {
+        //     newItem.Id = Guid.NewGuid();
+        //     newItem.IsDone = false;
+        //     newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+        //     // newItem.UserId = user.Id;
 
-            _context.Items.Add(newItem);
+        //     _context.Items.Add(newItem);
 
-            var saveResult = await _context.SaveChangesAsync();
-            return saveResult == 1;
-        }
+        //     var saveResult = await _context.SaveChangesAsync();
+        //     return saveResult == 1;
+        // }
 
-        public async Task<bool> MarkDoneAsync(Guid id, ApplicationUser user)
-        {
-            var item = await _context.Items
-                .Where(x => x.Id == id && x.UserId == user.Id)
-                .SingleOrDefaultAsync();
+        // public async Task<bool> MarkDoneAsync(Guid id, ApplicationUser user)
+        // {
+        //     var item = await _context.Items
+        //         .Where(x => x.Id == id 
+        //         // && x.UserId == user.Id
+        //         )
+        //         .SingleOrDefaultAsync();
 
-            if (item == null) return false;
-            item.IsDone = true;
+        //     if (item == null) return false;
+        //     item.IsDone = true;
 
-            var saveResult = await _context.SaveChangesAsync();
-            return saveResult == 1;
-        }
+        //     var saveResult = await _context.SaveChangesAsync();
+        //     return saveResult == 1;
+        // }
 
         // public Task<bool> AddItemAsync(TodoItem newItem, ApplicationUser user)
         // {

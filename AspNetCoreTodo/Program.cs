@@ -20,24 +20,24 @@ namespace AspNetCoreTodo
             CreateHostBuilder(args).Build().Run();
         }
 
-        private static void InitializeDatabase(IWebHost host)
-        {
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
+        // private static void InitializeDatabase(IWebHost host)
+        // {
+        //     using (var scope = host.Services.CreateScope())
+        //     {
+        //         var services = scope.ServiceProvider;
 
-                try
-                {
-                    SeedData.InitializeAsync(services).Wait();
-                }
-                catch (Exception ex)
-                {
-                    var logger = services
-                    .GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "Error occured seeding the DB.");
-                }
-            }
-        }
+        //         try
+        //         {
+        //             SeedData.InitializeAsync(services).Wait();
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             var logger = services
+        //             .GetRequiredService<ILogger<Program>>();
+        //             logger.LogError(ex, "Error occured seeding the DB.");
+        //         }
+        //     }
+        // }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

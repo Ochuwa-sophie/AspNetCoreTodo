@@ -1,13 +1,13 @@
-@using Microsoft.AspNetCore.Identity
-@using AspNetCoreTodo.Models
+@* @using Microsoft.AspNetCore.Identity
+@using AspNetCoreTodo.Models *@
 
 @*// so there was an error here too ... you registred IdentityUser in startup But your using ApplicationUser.. shouldnt be.
     @inject SignInManager<ApplicationUser> signInManager
     @inject UserManager<ApplicationUser> userManager*@
-@inject SignInManager<IdentityUser> signInManager
-@inject UserManager<IdentityUser> userManager
+@* @inject SignInManager<IdentityUser> signInManager
+@inject UserManager<IdentityUser> userManager *@
 @*Here you spelt you uses "signInManager" instead of "SignInManager" notice the S s and samething for userManger notice the U u *@
-@if (signInManager.IsSignedIn(User))
+@* @if (signInManager.IsSignedIn(User))
 {
     var currentUser = await userManager.GetUserAsync(User);
 
@@ -29,4 +29,4 @@
             </li>
         </ul>
     }
-}
+} *@
