@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics;
-using System.Reflection.Metadata;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,15 +20,17 @@ namespace AspNetCoreTodo.Services
             public async Task<TodoItem[]> GetIncompleteItemsAsync(ApplicationUser user)
             {
                 return await _context.Items
-                        .Where(x => x.IsDone == false)
+                        .Where(x => x.IsDone == false && x.UserId == user.Id)
                         .ToArrayAsync();
             }
 
-            public async Task<bool> AddItemAsync(TodoItem newItem)
+            public async Task<bool> AddItemAsync(TodoItem newItem, ApplicationUser user)
             {
                 newItem.Id = Guid.NewGuid();
+                // newItem.OwnerId = user.Id;
                 newItem.IsDone = false;
                 newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+                newItem.UserId = user.Id;
                 
                 _context.Items.Add(newItem);
                 
@@ -38,10 +38,10 @@ namespace AspNetCoreTodo.Services
                 return saveResult == 1;
             }
 
-            public async Task<bool> MarkDoneAsync(Guid id)
+            public async Task<bool> MarkDoneAsync(Guid id, ApplicationUser user)
             {
                 var item = await _context.Items
-                    .Where(x => x.Id == id)
+                    .Where(x => x.Id == id && x.UserId == user.Id)
                     .SingleOrDefaultAsync();
                 
                 if (item == null) return false;
