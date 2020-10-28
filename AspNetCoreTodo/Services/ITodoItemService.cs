@@ -11,6 +11,7 @@ using AspNetCoreTodo.Models;
             {
                 Task<TodoItem[]> GetIncompleteItemsAsync();
                 Task<bool> AddItemAsync(TodoItem newItem);
+                Task<bool> MarkDoneAsync(Guid id);
             }
             //Getincompleteitemsasync requires no parameter and returns task<todoitem[]>
             //the task type is like a promise because getincomplete... is an async method so i may not get my todo immediately because
