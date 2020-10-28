@@ -35,8 +35,9 @@ namespace AspNetCoreTodo
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
            services.AddRazorPages();
-           services.AddSingleton<ITodoItemService, FakeTodoItemService>();
+           services.AddScoped<ITodoItemService, TodoItemService>();
         }
+        //entity framework uses addscoped while hardwiring uses addsingleton
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
