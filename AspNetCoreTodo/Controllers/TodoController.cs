@@ -45,5 +45,24 @@ namespace AspNetCoreTodo.Controllers
                 
             return View(model);
         }
+//model binding btw todomodel properties and data in a request. the browser POSTs to this action once user submits the form.
+//model validation checks wether the data bound tot he model from the incoming request makes sense or is valid
+        [ValidateAntiForgeryToken]
+       //the above is also involved in preventing cross-site request forgery, it looks for and verifies the hidden verification token added to the form by asp-action tag helper
+        public async Task<IActionResult> AddItem(TodoItem newItem)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var successful = await _todoItemService.AddItemAsync(newItem);
+            if (!successful)
+            {
+                return BadRequest("Could not add item.");
+            }
+            return RedirectToAction("Index");
+        }
+
     }  
 }
