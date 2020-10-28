@@ -26,10 +26,13 @@ namespace AspNetCoreTodo.Controllers
 
        //using IActionResult because it gives me a wider scope of return types
        
-       private readonly ITodoItemService _todoItemService; //reference to the interface
+       private readonly ITodoItemService _todoItemService; 
+       //reference to the interface
        private readonly UserManager<ApplicationUser> _userManager; 
 
-       public TodoController(ITodoItemService todoItemService, UserManager<ApplicationUser> _userManager) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
+       public TodoController(
+           ITodoItemService todoItemService,
+            UserManager<ApplicationUser> userManager) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
        {
             _todoItemService = todoItemService;
             _userManager = userManager;
@@ -41,14 +44,17 @@ namespace AspNetCoreTodo.Controllers
         
         {
             var currentUser = await _userManager.GetUserAsync(User);
-            if (currentUser == null) return Challenge();
+            if (currentUser == null)
+            { 
+                return Challenge();
+            }
             
-            var items = await _todoItemService.GetIncompleteItemsAsync();
+            var todoItems = await _todoItemService.GetIncompleteItemsAsync(currentUser);
 //takes todo item from service and puts them in the view model then bind model to the view
 
             var model = new TodoViewModel()
             {
-                Items = items
+                Items = todoItems
             };
                 
             return View(model);
