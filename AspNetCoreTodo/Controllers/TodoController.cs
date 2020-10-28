@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using AspNetCoreTodo.Services;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -20,8 +21,19 @@ namespace AspNetCoreTodo.Controllers
         // Service layer =  business logic and databse code
       
        //using IActionResult because it gives me a wider scope of return types
-        public IActionResult Index()
+       
+       private readonly ITodoItemService _todoItemService; //reference to the interface
+       
+       public TodoController(ITodoItemService todoItemService) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
+       {
+            _todoItemService = todoItemService;
+       }
+       //the above will help my controler work with the todoitemserviceinterface aka ITodoItemService
+
+        public async Task<IActionResult> Index()
+        //because async
         {
+            var items = await _todoItemService.GetIncompleteItemsAsync();
 
         }
     }
