@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreTodo.Services;
+using AspNetCoreTodo.Models;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -19,7 +20,7 @@ namespace AspNetCoreTodo.Controllers
 
         // Presentation layer = ontrollers and view 
         // Service layer =  business logic and databse code
-      
+
        //using IActionResult because it gives me a wider scope of return types
        
        private readonly ITodoItemService _todoItemService; //reference to the interface
@@ -32,13 +33,17 @@ namespace AspNetCoreTodo.Controllers
 
         public async Task<IActionResult> Index()
         //because async
+        
         {
             var items = await _todoItemService.GetIncompleteItemsAsync();
+//takes todo item from service and puts them in the view model then bind model to the view
 
+            var model = new TodoViewModel()
+            {
+                Items = items
+            };
+                
+            return View(model);
         }
-    }
-
-
-   
-    
+    }  
 }
