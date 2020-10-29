@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AspNetCoreTodo.Services;
+using AspNetCoreTodo.Models;
 
 namespace AspNetCoreTodo
 {
@@ -37,7 +38,7 @@ namespace AspNetCoreTodo
            services.AddRazorPages();
            services.AddScoped<ITodoItemService, TodoItemService>();
         }
-        //entity framework uses addscoped while hardwiring uses addsingleton
+        //entity framework uses addscoped while hardcoding the data uses addsingleton 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

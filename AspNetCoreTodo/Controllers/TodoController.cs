@@ -29,11 +29,11 @@ namespace AspNetCoreTodo.Controllers
        
        private readonly ITodoItemService _todoItemService; 
        //reference to the interface
-       private readonly UserManager<ApplicationUser> _userManager; 
+       private readonly UserManager<IdentityUser> _userManager; 
 
        public TodoController(
            ITodoItemService todoItemService,
-            UserManager<ApplicationUser> userManager) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
+            UserManager<IdentityUser> userManager) //defines constructor for the todocontroller class, object must match Itodoitemservice interface in order to create the todocontroller
        {
             _todoItemService = todoItemService;
             _userManager = userManager;
