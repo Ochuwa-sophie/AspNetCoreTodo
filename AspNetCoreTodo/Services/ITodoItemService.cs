@@ -10,10 +10,10 @@ using AspNetCoreTodo.Data;
             public interface ITodoItemService
             
             {
-                Task<TodoItem[]> GetIncompleteItemsAsync(ApplicationUser user );
-                Task<bool> AddItemAsync(TodoItem newItem, ApplicationUser user);
+                Task<TodoItem[]> GetIncompleteItemsAsync(IdentityUser user );
+                Task<bool> AddItemAsync(TodoItem newItem, IdentityUser user);
         
-                Task<bool> MarkDoneAsync(Guid id, ApplicationUser user);
+                Task<bool> MarkDoneAsync(Guid id, IdentityUser user);
             }
             //Getincompleteitemsasync requires no parameter and returns task<todoitem[]>
             //the task type is like a promise because getincomplete... is an async method so i may not get my todo immediately because
