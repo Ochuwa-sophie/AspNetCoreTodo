@@ -36,7 +36,7 @@ namespace AspNetCoreTodo
 
             if (testAdmin != null) return;
 
-            testAdmin = new ApplicationUser { UserName = "admin@todo.local", Email = "admin@todo.local" };
+            testAdmin = new IdentityUser { UserName = "admin@todo.local", Email = "admin@todo.local" };
             await userManager.CreateAsync(testAdmin, "NotSecure123!!");
             await userManager.AddToRoleAsync(testAdmin, Constants.AdministratorRole);
         }
