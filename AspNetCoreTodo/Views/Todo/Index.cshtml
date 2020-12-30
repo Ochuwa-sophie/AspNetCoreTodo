@@ -1,29 +1,25 @@
-﻿@model TodoViewModel
+@model TodoViewModel
+@*gotta call the model which contains the multitude todoitems*@
 @using Humanizer
-{
-    
-}
-
 @{
-    ViewData["Title"] = "To-do List";
+    ViewData["Title"] = "Manage your todo list";
 }
 
 <div class="panel panel-default todo-panel">
     <div class="panel-heading">@ViewData["Title"]</div>
+
     <table class="table table-hover">
         <thead>
             <tr>
-                <td> &#x2714;</td>
+                <td>&#x2714;</td>
                 <td>Item</td>
                 <td>Due</td>
-            </tr>
         </thead>
-
         @foreach (var item in Model.Items)
         {
             <tr>
                 <td>
-                    <form asp-action="MarkDone" method="POST">
+                    <form asp-action="Markdone" method="POST">
                     <input type="checkbox" class="done-checkbox">
                     <input type="hidden" name="id" value="@item.Id">
                     </form>
@@ -33,10 +29,9 @@
             </tr>
         }
     </table>
-
+    
     <div class="panel-footer add-item-form">
-    @await Html.PartialAsync("AddItemPartial", new TodoItem())
-    @* @await Html.PartialAsync("SetEndDatePartial", new TodoItem()) *@
+        @await Html.PartialAsync("AddItemPartial", new TodoItem())
     </div>
-
 </div>
+
